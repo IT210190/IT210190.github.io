@@ -1,0 +1,90 @@
+body {
+    background-image: linear-gradient(to left, rgba(64, 137, 64, 0.65), rgba(125, 64, 137, 0.65));
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.464);
+    border: 10px black solid;
+    border-radius: 10px;
+    height: 90vh;
+}
+
+#display {
+    background-color: white;
+    width: 85%;
+    margin-top: 5%;
+    text-align: end;
+    font-size: 90px;
+    padding: 5px;
+}
+
+#numpad {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.numb {
+    background-color: white;
+}
+
+.op {
+    background-color: rgba(112, 255, 84, 0.663);
+}
+
+.op,
+.numb {
+    border: black 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1vw;
+    width: 20%;
+    margin-left: 2%;
+}
+
+@media screen and (max-height: 875px) {
+    body {
+        font-size: 50px;
+    }
+    #display {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-height: 790px) {
+    body {
+        font-size: 30px;
+    }
+    #display {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 610px) {
+    .op,
+    .numb {
+        padding: 0;
+        font-size: 20px;
+    }
+}
