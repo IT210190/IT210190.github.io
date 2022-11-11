@@ -1,0 +1,18 @@
+body {
+    background-image: linear-gradient(to right, rgb(255, 87, 87), rgb(241, 241, 50), rgb(60, 165, 60));
+}
+
+#ih {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.637);
+    color: white;
+}
+
+.ilink {
+    background-color: rgba(0, 0, 0, 0.548);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: white 1px solid;
+    box-shadow: 0 0 5px white;
+}
