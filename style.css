@@ -1,7 +1,6 @@
 body {
     background-image: linear-gradient(to right, rgb(55, 165, 55), rgb(75, 75, 198), rgb(218, 82, 82));
     background-size: cover;
-    background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
 }
 
