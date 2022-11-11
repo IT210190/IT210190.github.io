@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div id="display"></div>
+
+        <div style="height: 100vh; display:flex; align-items: center; width: 100%;">
+
+            <div id="numpad">
+                <div class="row">
+                    <div class="numb" style="width: 46%;" onclick="newInput('C')">C</div>
+                    <div class="numb" onclick="newInput('b')"><img src="./img/arrow.png" style="width: 20px; height: auto;"></div>
+                    <div class="op" onclick="newInput('/')">/</div>
+                </div>
+                <div class="row">
+                    <div class="numb" onclick="newInput('1')">1</div>
+                    <div class="numb" onclick="newInput('2')">2</div>
+                    <div class="numb" onclick="newInput('3')">3</div>
+                    <div class="op" onclick="newInput('*')">x</div>
+
+                </div>
+                <div class="row">
+                    <div class="numb" onclick="newInput('4')">4</div>
+                    <div class="numb" onclick="newInput('5')">5</div>
+                    <div class="numb" onclick="newInput('6')">6</div>
+                    <div class="op" onclick="newInput('-')">-</div>
+                </div>
+                <div class="row">
+                    <div class="numb" onclick="newInput('7')">7</div>
+                    <div class="numb" onclick="newInput('8')">8</div>
+                    <div class="numb" onclick="newInput('9')">9</div>
+                    <div class="op" onclick="newInput('+')">+</div>
+                </div>
+                <div class="row">
+                    <div class="numb" style="width: 73%;" onclick="newInput('0')">0</div>
+                    <div class="op" onclick="newInput('=')">=</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
