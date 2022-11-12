@@ -1,10 +1,11 @@
 body {
     background-image: linear-gradient(to left, rgba(64, 137, 64, 0.65), rgba(125, 64, 137, 0.65));
     display: flex;
-    justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 5vh;
     overflow: hidden;
+    flex-direction: column;
 }
 
 main {
@@ -32,6 +33,7 @@ main {
     width: 100%;
     flex-direction: column;
     padding-bottom: 5%;
+    align-items: center;
 }
 
 .row {
@@ -40,7 +42,6 @@ main {
     flex-direction: row;
     width: 40vw;
     margin-top: 5vh;
-    margin-left: 4vw;
 }
 
 .numb {
