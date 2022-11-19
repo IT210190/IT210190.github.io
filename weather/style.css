@@ -1,29 +1,59 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(53, 145, 145);
+    background-color: rgb(80, 154, 154);
     color: white;
 }
 
 #city {
     text-align: center;
-    font-size: 40px;
+    font-size: 4vw;
 }
 
 #erg {
     width: 100%;
 }
 
-#erg>h2 {
-    text-align: center;
+.date {
     text-decoration: underline;
+    font-size: 3vw;
+    font-weight: 600;
+    text-align: center;
 }
 
-#container {
+.container {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
 .littleContainer {
+    text-align: center;
+}
+
+.littleContainer>h3, #weitDet {
+    font-size: 2.4vw;
+}
+
+#weitDet {
+    text-align: center;
+}
+
+.littleContainer>p, .container>p {
+    font-size: 2vw;
+}
+
+.littleContainer>img {
+    width: 7vw;
+    max-height: auto;
+}
+
+#hourlyDetails {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hourlyHours {
+    border: black 1px solid;
+    padding: 0.5vw;
     text-align: center;
 }
