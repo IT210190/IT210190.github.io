@@ -23,7 +23,7 @@ function main(dayNumber) {
                 '<p>Wolkenbedeckt: ' + erg.list[dayNumber].clouds.all + '%</p><p>gefühlte Temperatur: ' + erg.list[dayNumber].main.feels_like + '°C</p></div><hr>'
 
             for(let i = 0; i < 24; ++i) {
-                document.getElementById('hourlyDetails').innerHTML += '<div class="hourlyHours"><h4>' + (erg.list[getStartingHour(dayNumber) + i].dt_txt).split(" ")[1].split(":")[0] + 'h</h4><p>' + erg.list[i * (dayNumber + 1)].main.temp + '°C</p></div>';
+                document.getElementById('hourlyDetails').innerHTML += '<div class="hourlyHours"><h4>' + (erg.list[getStartingHour(dayNumber) + i].dt_txt).split(" ")[1].split(":")[0] + 'h</h4><p>' + erg.list[i * (dayNumber + 1)].main.temp + '°C</p><p>Regen-wkt: ' + (erg.list[i].pop * 100).toFixed(2) + '%</p></div>';
             }
         }
     };
