@@ -50,10 +50,25 @@ body {
 #hourlyDetails {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 .hourlyHours {
     border: black 1px solid;
-    padding: 0.5vw;
+    padding: 0.3vw;
     text-align: center;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 635px) {
+#hourlyDetails {
+    overflow: scroll;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.hourlyHours {
+    padding: 1vw;
+    font-size: 2vw;
+}
 }
