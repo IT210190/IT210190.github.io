@@ -5,6 +5,8 @@ function main(dayNumber) {
         if (this.readyState == 4 && this.status == 200) {
             let erg = JSON.parse(this.responseText);
             
+            document.getElementById('title').innerHTML = (erg.list[dayNumber].dt_txt).split(" ")[0];
+            
             document.getElementById('city').innerHTML = erg.city.name;
             
             document.getElementById('erg').innerHTML = '<h2 class="date" onclick="changeSite()">' + (erg.list[dayNumber].dt_txt).split(" ")[0] + '</h2>' +
