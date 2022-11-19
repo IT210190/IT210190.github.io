@@ -4,7 +4,9 @@ function main(dayNumber) {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let erg = JSON.parse(this.responseText);
-            
+
+            console.log(erg);
+
             document.getElementById('title').innerHTML = (erg.list[dayNumber].dt_txt).split(" ")[0];
             
             document.getElementById('city').innerHTML = erg.city.name;
@@ -20,8 +22,8 @@ function main(dayNumber) {
                 /*<p>Niederschlag letzte Stunde: ' + erg.list[dayNumber].rain.1h + '</p>*/
                 '<p>Wolkenbedeckt: ' + erg.list[dayNumber].clouds.all + '%</p><p>gefühlte Temperatur: ' + erg.list[dayNumber].main.feels_like + '°C</p></div><hr>'
 
-            for(let i = getStartingHour(dayNumber); i < 24; ++i) {
-                document.getElementById('hourlyDetails').innerHTML += '<div class="hourlyHours"><h4>' + (erg.list[i].dt_txt).split(" ")[1].split(":")[0] + 'h</h4><p>' + erg.list[i * (dayNumber + 1)].main.temp + '°C</p></div>';
+            for(let i = 0; i < 24; ++i) {
+                document.getElementById('hourlyDetails').innerHTML += '<div class="hourlyHours"><h4>' + (erg.list[getStartingHour(dayNumber) + i].dt_txt).split(" ")[1].split(":")[0] + 'h</h4><p>' + erg.list[i * (dayNumber + 1)].main.temp + '°C</p></div>';
             }
         }
     };
