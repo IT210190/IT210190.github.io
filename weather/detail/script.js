@@ -14,7 +14,7 @@ function main(dayNumber) {
             document.getElementById('erg').innerHTML = '<h2 class="date" onclick="changeSite()">' + (erg.list[dayNumber].dt_txt).split(" ")[0] + '</h2>' +
                 '<div class="container">' +
                 '<div class="littleContainer"><h3>Temperatur</h3><p style="color: yellow;">' + erg.list[dayNumber].main.temp + '°C</p><p>max. Temp: ' + erg.list[dayNumber].main.temp_max + '°C</p><p>min. Temp: ' + erg.list[dayNumber].main.temp_min + '°C</p></div>' +
-                '<div class="littleContainer"><h3>' + erg.list[dayNumber].weather[0].main + '</h3><img src="http://openweathermap.org/img/wn/' + erg.list[dayNumber].weather[0].icon + '@2x.png" style="margin-top: -1vh;"><p>' + erg.list[dayNumber].weather[0].description + '</p></div>' +
+                '<div class="littleContainer"><h3>' + erg.list[dayNumber].weather[0].main + '</h3><img src="http://openweathermap.org/img/wn/' + erg.list[dayNumber].weather[0].icon + '@2x.png" style="margin-top: -1vh;" alt="weather"><p>' + erg.list[dayNumber].weather[0].description + '</p></div>' +
                 '<div class="littleContainer"><h3>Feuchtigkeit</h3><p style="color: blue;">' + erg.list[dayNumber].main.humidity + '%</p></div>' +
                 '<div class="littleContainer"><h3>Wind</h3><p>' + erg.list[dayNumber].wind.speed + ' M/S</p><p>' + erg.list[dayNumber].wind.deg + '°</p></div></div>' +
                 '<h3 id="weitDet">weitere Details</h3><div class="container">' +
@@ -22,7 +22,7 @@ function main(dayNumber) {
                 '<p>Wolkenbedeckt: ' + erg.list[dayNumber].clouds.all + '%</p><p>gefühlte Temperatur: ' + erg.list[dayNumber].main.feels_like + '°C</p></div><hr>'
 
             for (let i = 0; i < 24; ++i) {
-                document.getElementById('hourlyDetails').innerHTML += '<div class="hourlyHours"><h4>' + (erg.list[getStartingHour(dayNumber) + i].dt_txt).split(" ")[1].split(":")[0] + 'h</h4><p>' + erg.list[i * (dayNumber + 1)].main.temp + '°C</p><p>Regen: ' + (erg.list[i].pop * 100).toFixed(2) + '%</p><img src="http://openweathermap.org/img/wn/' + erg.list[i].weather[0].icon + '@2x.png" style="margin-top: -1vh;"></div>';
+                document.getElementById('hourlyDetails').innerHTML += '<div class="hourlyHours"><h4>' + (erg.list[getStartingHour(dayNumber) + i].dt_txt).split(" ")[1].split(":")[0] + 'h</h4><p>' + erg.list[i * (dayNumber + 1)].main.temp + '°C</p><p>Regen: ' + (erg.list[i].pop * 100).toFixed(2) + '%</p><img src="http://openweathermap.org/img/wn/' + erg.list[i].weather[0].icon + '@2x.png" style="margin-top: -1vh;" alt="weather"></div>';
             }
         }
     };
