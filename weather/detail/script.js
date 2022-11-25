@@ -9,10 +9,10 @@ function main(dayNumber) {
             let startingNumber = getStartingHour(dayNumber);
 
             document.getElementById('title').innerHTML = (erg.list[startingNumber].dt_txt).split(" ")[0];
-
+            let date = new Date(erg.list[startingNumber].dt * 1000);
             document.getElementById('city').innerHTML = erg.city.name;
 
-            document.getElementById('erg').innerHTML = '<h2 class="date" onclick="changeSite()">' + (erg.list[startingNumber].dt_txt).split(" ")[0] + '</h2>' +
+            document.getElementById('erg').innerHTML = '<h2 class="date" onclick="changeSite()">' + date.toString().split(" ")[0] + ' ' + (erg.list[startingNumber].dt_txt).split(" ")[0] + '</h2>' +
                 '<div class="container">' +
                 '<div class="littleContainer"><h3>Temperatur</h3><p style="color: yellow;">' + erg.list[startingNumber].main.temp + '°C</p><p>max. Temp: ' + erg.list[startingNumber].main.temp_max + '°C</p><p>min. Temp: ' + erg.list[startingNumber].main.temp_min + '°C</p></div>' +
                 '<div class="littleContainer"><h3>' + erg.list[startingNumber].weather[0].main + '</h3><img src="http://openweathermap.org/img/wn/' + erg.list[startingNumber].weather[0].icon + '@2x.png" style="margin-top: -1vh;"><p>' + erg.list[startingNumber].weather[0].description + '</p></div>' +
