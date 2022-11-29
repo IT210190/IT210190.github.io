@@ -11,18 +11,16 @@ body {
 
 ::-webkit-scrollbar-track {
     background: rgb(80, 154, 154);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+ ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+ ::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
 
 #city {
     text-align: center;
@@ -43,14 +41,16 @@ body {
 .container {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 100vw;
 }
 
 .littleContainer {
     text-align: center;
+    width: 25vw;
 }
 
-.littleContainer>h3, #weitDet {
+.littleContainer>h3,
+#weitDet {
     font-size: 2.4vw;
 }
 
@@ -58,7 +58,8 @@ body {
     text-align: center;
 }
 
-.littleContainer>p, .container>p {
+.littleContainer>p,
+.container>p {
     font-size: 2vw;
 }
 
@@ -78,4 +79,26 @@ body {
     padding: 1vw;
     text-align: center;
     font-size: 1.5vw;
+}
+
+.img {
+    margin-top: -1vh;
+    max-height: auto;
+    width: 120%;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .littleContainer {
+        display: block;
+        width: 50vw;
+    }
+    .littleContainer:nth-child(1) {
+        border-bottom: 1px solid black;
+    }
+    .littleContainer:nth-child(2) {
+        border-bottom: 1px solid black;
+    }
 }
